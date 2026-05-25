@@ -49,55 +49,6 @@ The architecture is deliberately modular — backend apps map cleanly to busines
 
 ---
 
-## ◈ Features
-
-<table>
-  <tr>
-    <td align="center" width="33%">
-      <br/>
-      <h3>📊 Unified Dashboards</h3>
-      Views, engagement, and growth trends in one place — slice by video, date range, or channel segment without stitching together CSV exports.
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <h3>🧠 AI Insight Engine</h3>
-      GPT-powered explanations for spikes, dips, and anomalies. Not just <em>"views dropped 40%"</em> — but <strong>why</strong> it happened and what to do next.
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <h3>🔔 Notifications Pipeline</h3>
-      Milestone alerts and threshold triggers delivered where your team lives. Celery workers process events asynchronously — no blocking.
-      <br/><br/>
-    </td>
-  </tr>
-  <tr>
-    <td align="center" width="33%">
-      <br/>
-      <h3>📺 YouTube Data Sync</h3>
-      First-class YouTube API integration for video metadata, performance signals, and channel-level aggregates — synced on a Celery beat schedule.
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <h3>⚡ Realtime Updates</h3>
-      Django Channels pushes live events to the dashboard over WebSockets. Subscribe to a video and watch numbers move as they happen.
-      <br/><br/>
-    </td>
-    <td align="center" width="33%">
-      <br/>
-      <h3>🧩 Modular Backend</h3>
-      Each domain ships as an isolated Django app. Add or extend <code>analytics</code>, <code>ai_insights</code>, or <code>youtube</code> without cross-cutting rewrites.
-      <br/><br/>
-    </td>
-  </tr>
-</table>
-
-<br/>
-
----
-
 ## ◈ Stack
 
 <div align="center">
@@ -122,11 +73,11 @@ The architecture is deliberately modular — backend apps map cleanly to busines
 ## ◈ Architecture
 
 ```
- ┌──────────────────────────────────────────────────────────────────────────────┐
- │                                                                              │
+ ┌─────────────────────────────────────────────────────────────────────────────┐
+ │                                                                             │
  │                        B O O S T E R B O A R D S                            │
- │                           System Architecture                                │
- │                                                                              │
+ │                           System Architecture                               │
+ │                                                                             │
  ├──────────────────────┬────────────────────────┬─────────────────────────────┤
  │                      │                        │                             │
  │   ┌──────────────┐   │   ┌────────────────┐   │   ┌─────────────────────┐   │
@@ -145,11 +96,11 @@ The architecture is deliberately modular — backend apps map cleanly to busines
  │                      │   └────────────────┘   │   └─────────────────────┘   │
  │                      │                        │                             │
  ├──────────────────────┴────────────────────────┴─────────────────────────────┤
- │                                                                              │
- │    ↳  YouTube Data API  ──  external video and channel metadata              │
- │    ↳  OpenAI API        ──  on-demand insight generation via workers         │
- │                                                                              │
- └──────────────────────────────────────────────────────────────────────────────┘
+ │                                                                             │
+ │    ↳  YouTube Data API  ──  external video and channel metadata             │
+ │    ↳  OpenAI API        ──  on-demand insight generation via workers        │
+ │                                                                             │
+ └─────────────────────────────────────────────────────────────────────────────┘
 
   Browser → Django REST → PostgreSQL                (request / response path)
   Celery Workers → Redis Broker → Beat Scheduler    (background task path)
