@@ -15,57 +15,57 @@ Thumbs.db
 
 
 # -----------------------------
-# Frontend (Next.js) - /frontend
+# Frontend (Next.js) - /frontend-bb
 # -----------------------------
-frontend/node_modules/
-frontend/.next/
-frontend/out/
-frontend/build/
-frontend/.turbo/
-frontend/.vercel/
-frontend/coverage/
-frontend/npm-debug.log*
-frontend/yarn-debug.log*
-frontend/yarn-error.log*
-frontend/pnpm-debug.log*
+frontend-bb/node_modules/
+frontend-bb/.next/
+frontend-bb/out/
+frontend-bb/build/
+frontend-bb/.turbo/
+frontend-bb/.vercel/
+frontend-bb/coverage/
+frontend-bb/npm-debug.log*
+frontend-bb/yarn-debug.log*
+frontend-bb/yarn-error.log*
+frontend-bb/pnpm-debug.log*
 
 
 # -----------------------------
-# Backend (Django) - /backend
+# Backend (Django) - /backend-bb
 # -----------------------------
 # Python cache
-backend/__pycache__/
-backend/**/*.py[cod]
-backend/*$py.class
+backend-bb/__pycache__/
+backend-bb/**/*.py[cod]
+backend-bb/*$py.class
 
 # Virtual environments
-backend/venv/
-backend/.venv/
-backend/env/
-backend/.env/
+backend-bb/venv/
+backend-bb/.venv/
+backend-bb/env/
+backend-bb/.env/
 
 # Build / packaging
-backend/build/
-backend/dist/
-backend/*.egg-info/
-backend/.eggs/
+backend-bb/build/
+backend-bb/dist/
+backend-bb/*.egg-info/
+backend-bb/.eggs/
 
 # Tool caches
-backend/.mypy_cache/
-backend/.pytest_cache/
-backend/.ruff_cache/
-backend/.tox/
-backend/.nox/
-backend/.coverage
-backend/.coverage.*
-backend/htmlcov/
+backend-bb/.mypy_cache/
+backend-bb/.pytest_cache/
+backend-bb/.ruff_cache/
+backend-bb/.tox/
+backend-bb/.nox/
+backend-bb/.coverage
+backend-bb/.coverage.*
+backend-bb/htmlcov/
 
 # Django files
-backend/db.sqlite3
-backend/db.sqlite3-journal
-backend/local_settings.py
-backend/media/
-backend/staticfiles/
+backend-bb/db.sqlite3
+backend-bb/db.sqlite3-journal
+backend-bb/local_settings.py
+backend-bb/media/
+backend-bb/staticfiles/
 
 # Logs
-backend/*.log
+backend-bb/*.log
